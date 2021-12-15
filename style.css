@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    position: relative;
+    background: url("./203530.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timer{
+    position: absolute;
+    top: 290px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: monospace;
+    text-transform: uppercase;
+    background: rgb(84, 95, 105);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,.3);
+    user-select: none;
+    color: white;
+    text-shadow: 1px 1px 0.2px white;
+}
+
+#hourT, #minuteT, #secondT{
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 24px;
+    width: 60px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: black !important;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 100000;
+}
+
+#hourT::placeholder,#minuteT::placeholder,#secondT::placeholder{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    left: 5px;
+}
+
+#textDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(84, 95, 105);
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px 1px white;
+    width: 316px;
+    height: 124px;
+}
+
+#btnAlarm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white !important;
+    font-family: monospace;
+    width: 182px;
+    height: 42px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,.1);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    background: forestgreen;
+}
+
+#btnAlarm:hover{
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid forestgreen;
+    box-shadow: none !important;
+}
+
+#btnAlarm:active{
+    font-size: 14px;
+    padding: 5px;
+    width: 170px;
+    height: 40px;
+    transition: 0.08s ease-in-out;
+}
+
+.textDivIn{
+    display: flex;
+    gap: 5px;
+    user-select: none;
+}
+
+.timerAlarm{
+    position: relative;
+    top: 40px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: monospace;
+    text-transform: uppercase;
+    background: rgb(84, 95, 105);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,.3);
+    user-select: none;
+    color: white;
+    text-shadow: 1px 1px 0.2px white;
+}
+
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#remove{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    color:white;
+    background: transparent;
+    border: 2px solid crimson;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.05s ease-in-out;
+}
+
+#remove:active, #pause:active, #play:active{
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    transition: 0.05s ease-in-out;
+}
+
+#remove:hover{
+    background: white;
+    color: crimson;
+    border: 2px solid white;
+    transition: 0.05s ease-in-out;
+}
+
+#pause{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    background: transparent;
+    border: 2px solid orange;
+    font-size: 16px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.05s ease-in-out;
+}
+
+#pause:hover{
+    background: white;
+    color: orange;
+    border: 2px solid white;
+    transition: 0.05s ease-in-out;
+}
+
+#play{
+    display: none;
+    position: absolute;
+    top: 95px;
+    left: -50px;
+    background: transparent;
+    border: 2px solid springgreen;
+    font-size: 16px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.05s ease-in-out;
+}
+
+
+#play:hover{
+    background: white;
+    color: springgreen;
+    border: 2px solid white;
+    transition: 0.05s ease-in-out;
+}
+
+
+
+.timerTextGroup{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    position: relative;
+}
+
+.btnAlarmGroup{
+    display: flex;
+    gap: 10px;
+}
+
+#btnAlarmClear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-family: monospace;
+    width: 100px;
+    height: 42px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,.1);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    background: crimson;
+}
+
+#btnAlarmClear:hover{
+    border: 2px solid crimson;
+    background: transparent;
+    transition: 0.1s ease-in-out;
+}
+
+#btnAlarmClear:active{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}

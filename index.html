@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <title>Timer</title>
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="timer"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span></div>
+            <div class="textDiv">
+                <fieldset id="textDiv">
+                    <div class="textDivIn">
+                        <input type="number" min="00" max="24" maxlength="2" name="hour" id="hourT" placeholder="HH" required>
+                        <input type="number" min="00" max="59" maxlength="2" name="minute" id="minuteT" placeholder="MM" required>
+                        <input type="number" min="00" max="59" maxlength="2" name="second" id="secondT" placeholder="SS" required>
+                    </div>
+                    <div class="btnAlarmGroup">
+                        <button id="btnAlarm">Alarm</button>
+                        <button id="btnAlarmClear">Clear</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="timerTextGroup">
+                <button id="remove" alt="remove"><i class='bx bxs-trash-alt' ></i></button>
+                <button id="pause" alt="remove"><i class='bx bx-pause'></i></button>
+                <button id="play" alt="remove"><i class='bx bx-play'></i></i></button>
+                <div class="timerAlarm"><span id="timerHourText">00</span>:<span id="timerMinuteText">00</span>:<span id="timerSecondText">00</span></div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
